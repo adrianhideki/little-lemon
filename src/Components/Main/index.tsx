@@ -1,6 +1,5 @@
 const Main = () => {
-    return <main>Main</main>;
-  };
-  
-  export default Main;
-  
+  return <main style={{ height: "100vh" }}>Main</main>;
+};
+
+export default Main;
