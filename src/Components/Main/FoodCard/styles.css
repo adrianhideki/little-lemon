@@ -1,0 +1,41 @@
+.card-container {
+  max-width: 250px;
+  min-width: 250px;
+  background-color: #edefee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-image {
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+}
+
+.card-action {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.food-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.food-name {
+  font-weight: 700;
+}
+.food-price {
+  font-weight: 700;
+  color: #ec852a;
+}
+
+.food-descrition {
+  font-weight: 300;
+  color: #495e57;
+}

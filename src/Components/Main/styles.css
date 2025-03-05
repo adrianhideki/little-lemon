@@ -1,0 +1,55 @@
+.food {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.food-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.food-header > h1 {
+  font-family: "Markazi Text", "Roboto", sans-serif;
+  color: #000;
+  font-size: 4.5rem;
+  font-weight: 500;
+}
+
+.food-header > button {
+  width: fit-content;
+  height: fit-content;
+  background-color: #f4ce14;
+  color: #333333;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px 12px 32px;
+  font-weight: 800;
+  transition: color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+  font-size: 1rem;
+}
+
+.food-card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 849px) {
+  .food {
+    padding: 16px;
+  }
+
+  .food-card-container {
+    justify-content: center;
+  }
+
+  .food-header > h1 {
+    font-size: 3.5rem;
+  }
+}
