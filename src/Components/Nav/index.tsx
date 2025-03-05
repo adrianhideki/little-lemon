@@ -33,6 +33,7 @@ const menuItems = [
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     document.addEventListener("click", handleClickOutside, true);
@@ -46,22 +47,27 @@ const Nav = () => {
     setIsOpen((prev) => !prev);
   };
 
-  const handleClickOutside = (event) => {
-    if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (!buttonRef.current || !sidebarRef.current) return;
+
+    if (
+      !sidebarRef.current.contains(event.target as Node) &&
+      !buttonRef.current.contains(event.target as Node)
+    ) {
       setIsOpen(false);
     }
   };
 
   return (
     <>
-      <nav className="container">
+      <nav className="nav-container">
         <img src={Logo} height={50} />
-        <div onClick={handleMenuClick}>
+        <div ref={buttonRef} onClick={handleMenuClick}>
           <img className="menu-button" src={menu} height={30} />
         </div>
         <ul>
           {menuItems.map((item) => (
-            <li>
+            <li key={item.href}>
               <a href={item.href}>{item.title}</a>
             </li>
           ))}
@@ -70,7 +76,7 @@ const Nav = () => {
       <div ref={sidebarRef} className={isOpen ? "sidebar" : "sidebar-off"}>
         <ul>
           {menuItems.map((item) => (
-            <li>
+            <li key={item.href}>
               <a href={item.href}>{item.title}</a>
             </li>
           ))}
