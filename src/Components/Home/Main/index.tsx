@@ -8,7 +8,6 @@ const Main = () => {
       style={{
         display: "flex",
         flexDirection: "column",
-        paddingBottom: "240px",
       }}
     >
       <div className="food">
@@ -53,6 +52,26 @@ const Main = () => {
               photo="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
               rating={4.5}
               review="Little Lemon was an absolute delight! From the moment I walked in, the atmosphere was warm and inviting."
+            />
+          </div>
+        </div>
+      </div>
+      <div className="owners">
+        <div className="owners-container">
+          <div className="owners-text">
+            <h2>Adrian and Mario</h2>
+            <div>
+              We started this restaurant with a shared dream: to create a warm
+              and inviting space where people could enjoy delicious, fresh
+              Mediterranean cuisine. For us, Little Lemon is more than just a
+              business, it's a passion.
+            </div>
+          </div>
+          <div className="owners-image">
+            <img
+              src="/src/assets/mario-and-adrian-a.jpg"
+              width={350}
+              style={{ borderRadius: "8px" }}
             />
           </div>
         </div>
