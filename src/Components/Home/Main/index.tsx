@@ -4,7 +4,11 @@ import "./styles.css";
 const Main = () => {
   return (
     <main
-      style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        paddingBottom: "240px",
+      }}
     >
       <div className="food">
         <div className="food-header">

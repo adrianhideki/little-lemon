@@ -1,0 +1,31 @@
+footer {
+    display: flex;
+    min-height: 30vh;
+    background-color: #495e57;
+    justify-content: center;
+}
+
+.footer-container {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    padding: 24px;
+    justify-content: space-between;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: lighter;
+}
+
+.footer-column > a {
+    font-weight: 300;
+    color: #F4CE14;
+}
+
+.footer-title {
+    font-weight: 700;
+    color: #F4CE14;
+}
