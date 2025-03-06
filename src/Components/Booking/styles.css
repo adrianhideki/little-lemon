@@ -1,0 +1,53 @@
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 15vh;
+}
+
+.form-container > form {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.form-container > form > input {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #495e57;
+  border: 1px solid #495e57;
+}
+
+.form-container > form > select {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #495e57;
+  border: 1px solid #495e57;
+}
+
+.form-container > form > input[type="submit"] {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f4ce14;
+  color: #000000;
+  transition: color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+  border: none;
+}
+
+.form-container > form > input[type="submit"]:hover {
+  background-color: #333333;
+  color: #f4ce14;
+  transition: color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+
+.form-container > form > select:disabled {
+  background-color: #c2c2c2;
+  transition: background-color 0.3s ease-in;
+}

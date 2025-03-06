@@ -6,7 +6,7 @@ import "./styles.css";
 const menuItems = [
   {
     title: "Home",
-    href: "#home",
+    href: "/",
   },
   {
     title: "About",
