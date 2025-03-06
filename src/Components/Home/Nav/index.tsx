@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import Logo from "../../assets/Logo.svg";
-import menu from "../../assets/menu.svg";
+import Logo from "../../../assets/Logo.svg";
+import menu from "../../../assets/menu.svg";
 import "./styles.css";
 
 const menuItems = [

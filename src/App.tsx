@@ -1,17 +1,11 @@
-import Nav from "./Components/Nav";
-import Header from "./Components/Header";
-import Main from "./Components/Main";
-import Footer from "./Components/Footer";
+import { Route, Routes } from "react-router";
+import Home from "./Components/Home";
 
 function App() {
-
   return (
-    <>
-      <Nav />
-      <Header />
-      <Main />
-      <Footer />
-    </>
+    <Routes>
+      <Route index element={<Home />} />
+    </Routes>
   );
 }
 
