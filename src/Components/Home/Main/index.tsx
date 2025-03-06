@@ -1,5 +1,6 @@
 import FoodCard from "./FoodCard";
 import "./styles.css";
+import TestimonialCard from "./TestimonialCard";
 
 const Main = () => {
   return (
@@ -35,6 +36,25 @@ const Main = () => {
             price="12.9"
             description="From classic lemon cake to frozen lemonade and even pink lemonade sheet cake."
           />
+        </div>
+      </div>
+      <div className="testimonials-container">
+        <div className="testimonials">
+          <h2>Testimonials</h2>
+          <div className="testimonials-card-container">
+            <TestimonialCard
+              name="John"
+              photo="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
+              rating={5}
+              review="If you want to have a good meal, trust in little lemon restaurant. I had a fantastic meal at Little Lemon last night."
+            />
+            <TestimonialCard
+              name="Sara"
+              photo="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
+              rating={4.5}
+              review="Little Lemon was an absolute delight! From the moment I walked in, the atmosphere was warm and inviting."
+            />
+          </div>
         </div>
       </div>
     </main>

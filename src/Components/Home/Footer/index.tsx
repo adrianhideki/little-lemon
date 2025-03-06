@@ -9,7 +9,7 @@ const Footer = () => {
           <a href="/">Home</a>
           <a href="/about">About</a>
           <a href="/menu">Menu</a>
-          <a href="/book">Reservations</a>
+          <a href="/booking">Reservations</a>
           <a href="/order-online">Order online</a>
           <a href="/login">Login</a>
         </div>

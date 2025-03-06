@@ -1,0 +1,20 @@
+.testimonial-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  color: #333333;
+  max-width: 250px;
+}
+
+.testimonial-review {
+  text-align: justify;
+}
+
+.testimonial-user {
+  object-fit: cover;
+  border-radius: 8px;
+}

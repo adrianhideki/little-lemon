@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router";
 import "./styles.css";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <header className="header-container">
       <div className="title">
@@ -11,7 +13,13 @@ const Header = () => {
           traditional <br />
           recipes served with a modern <br /> twist.
         </article>
-        <button>Reserve a Table</button>
+        <button
+          onClick={() => {
+            navigate("/booking");
+          }}
+        >
+          Reserve a Table
+        </button>
       </div>
       <div className="header-image" />
     </header>
