@@ -25,7 +25,6 @@ const BookingForm = ({
 
   const handleDateChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue("date", e.target.value);
-    console.log(e.target.value);
     const availableTimes = getAvailableTimes(e.target.value);
 
     setTimes(availableTimes);
@@ -78,6 +77,7 @@ const BookingForm = ({
           <option>Other</option>
         </select>
         <input
+          name="Make Your reservation"
           aria-label="Make Your reservation"
           type="submit"
           value="Make Your reservation"
