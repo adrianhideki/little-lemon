@@ -4,3 +4,13 @@ export type BookingFormValues = {
   guests: Number;
   ocasion: string;
 };
+
+export interface BookingAction {
+  type: "updateTimes" | "addReservation";
+  payload?: string[] | BookingFormValues;
+}
+
+export type BookingValues = {
+  reservedTimes: Record<string, string[]>;
+  reservations: BookingFormValues[];
+};

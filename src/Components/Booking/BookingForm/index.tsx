@@ -25,6 +25,7 @@ const BookingForm = ({
 
   const handleDateChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue("date", e.target.value);
+    console.log(e.target.value);
     const availableTimes = getAvailableTimes(e.target.value);
 
     setTimes(availableTimes);
