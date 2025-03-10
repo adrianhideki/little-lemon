@@ -24,7 +24,7 @@ it("should add a reservation", () => {
       payload: {
         date: "2025-01-01",
         guests: 1,
-        ocasion: "Anniversary",
+        occasion: "Anniversary",
         time: "18:00",
       },
     }
@@ -32,7 +32,7 @@ it("should add a reservation", () => {
 
   expect(result).toStrictEqual({
     reservations: [
-      { date: "2025-01-01", guests: 1, ocasion: "Anniversary", time: "18:00" },
+      { date: "2025-01-01", guests: 1, occasion: "Anniversary", time: "18:00" },
     ],
     reservedTimes: {},
   });

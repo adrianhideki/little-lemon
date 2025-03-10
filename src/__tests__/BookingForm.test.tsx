@@ -57,12 +57,34 @@ it("submits correctly", async () => {
   expect(submitMock).toHaveBeenCalled();
 });
 
+it("validate input data from user", async () => {
+  const submitMock = jest.fn();
+
+  render(
+    <BookingForm getAvailableTimes={() => ["18:00"]} onSubmit={submitMock} />
+  );
+
+  await waitFor(() => {
+    const submit = screen.getByRole("button", {
+      name: "Make Your reservation",
+    });
+
+    fireEvent.click(submit);
+  });
+
+  expect(submitMock).toHaveBeenCalledTimes(0);
+  expect(screen.getByText("date is a required field")).toBeInTheDocument();
+  expect(screen.getByText("time is a required field")).toBeInTheDocument();
+  expect(screen.getByText("occasion is a required field")).toBeInTheDocument();
+});
+
 it("redirects when submit correctly", async () => {
+  const spySetItem = jest.spyOn(Storage.prototype, 'setItem');
+
   render(<Booking />);
 
   global.fetchAPI = jest.fn(() => ["18:00"]);
   global.submitAPI = jest.fn(() => true);
-  const spySetItem = jest.spyOn(Storage.prototype, 'setItem');
 
   const dateInput = screen.getByLabelText("Choose the date");
   fireEvent.blur(dateInput, { target: { value: "2025-03-07" } });

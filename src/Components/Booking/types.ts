@@ -1,8 +1,8 @@
 export type BookingFormValues = {
   date: string;
   time: string;
-  guests: Number;
-  ocasion: string;
+  guests: number;
+  occasion: string;
 };
 
 export interface BookingAction {
