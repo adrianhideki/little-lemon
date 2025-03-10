@@ -1,3 +1,7 @@
-export function initializeTimes() {
-  return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+export function initializeTimes(date: string) {
+  if (date.length < 10) return [];
+
+  const result = fetchAPI(new Date(date));
+
+  return result;
 }

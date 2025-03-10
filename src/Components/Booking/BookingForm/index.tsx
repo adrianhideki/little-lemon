@@ -25,6 +25,12 @@ const BookingForm = ({
 
   const handleDateChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue("date", e.target.value);
+    setTimes([]);
+  };
+
+  const handleDateBlur = (e: ChangeEvent<HTMLInputElement>) => {
+    setValue("date", e.target.value);
+
     const availableTimes = getAvailableTimes(e.target.value);
 
     setTimes(availableTimes);
@@ -42,6 +48,7 @@ const BookingForm = ({
           id="res-date"
           {...register("date")}
           onChange={handleDateChange}
+          onBlur={handleDateBlur}
         />
         <label htmlFor="time">Choose the time</label>
         <select
@@ -49,7 +56,6 @@ const BookingForm = ({
           required
           id="time"
           {...register("time")}
-          disabled={!times.length}
         >
           {times.map((item) => (
             <option key={item}>{item}</option>
